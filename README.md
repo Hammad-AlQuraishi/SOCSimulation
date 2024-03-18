@@ -36,11 +36,29 @@ The statistical changes are measured below:
 
 Following below are the before and after snapshots for different resources present in the environment.
 
-### Before snapshot for the Windows VM (mostly authentication attempts):
+## Endpoint 1; Windows VM:
+### "Before" snapshot for the Windows VM (mostly authentication attempts):
 ![Windows before hardening](https://github.com/Hammad-AlQuraishi/mediumImages/blob/main/SOC%20Simulation%20in%20Azure/Attacks%20on%20Windows%20before%20hardening.png)
 
-### After snapshot for the Windows VM (mostly authentication attempts):
+### "After" snapshot for the Windows VM (mostly authentication attempts):
 ![Windows after hardening](https://github.com/Hammad-AlQuraishi/mediumImages/blob/main/SOC%20Simulation%20in%20Azure/Attacks%20on%20Windows%20after%20hardening.png)
 
 ### Means of hardening the Windows VM:
-Primarily, it was configuring the right NSGs to allow for only the authenticated, mostly internal traffic to RDP into the machine. 
+Primarily, it was configuring the right rules on the NSG to allow for only the authenticated, mostly internal traffic to RDP into the machine. 
+
+## Endpoint 2; Linux VM:
+### "Before" snapshot for the Linux VM (mostly SSH attempts):
+![Linux before hardening](https://github.com/Hammad-AlQuraishi/mediumImages/blob/main/SOC%20Simulation%20in%20Azure/Attacks%20on%20Linux%20before%20hardening.png)
+
+### "After" snapshot for the Linux VM (mostly SSH attempts):
+![Linux after hardening](https://github.com/Hammad-AlQuraishi/mediumImages/blob/main/SOC%20Simulation%20in%20Azure/Attacks%20on%20Linux%20after%20hardening.png)
+
+### Means of hardening the Linux VM:
+Primarily, it was configuring the right rules on the NSG to allow for only the authenticated, mostly internal traffic to RDP into the machine. 
+
+## Endpoint 3; MSSQL:
+### "Before" snapshot for the MS SQL (hosted on the Windows VM):
+![SQL before hardening](https://github.com/Hammad-AlQuraishi/mediumImages/blob/main/SOC%20Simulation%20in%20Azure/MSSQL%20attacks%20before%20hardening.png)
+
+### "After" snapshot for the MS SQL:
+The query didn't result any results; it didn't have any attacks happening on it after hardening!
