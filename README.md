@@ -62,3 +62,12 @@ Primarily, it was configuring the right rules on the NSG to allow for only the a
 
 ### "After" snapshot for the MS SQL:
 The query didn't result any results; it didn't have any attacks happening on it after hardening!
+
+## Hiccups during the project and how they were resolved:
+### 1. Unable to authenticate into the SQL server remotely:
+The problem was due to the fact that the configuration manager for SQL servers on my VM was configured to not allow TCP/IP connections. The steps take to remediate that are as follows:
+  1. Open up SQL Server Configuration Manager.
+  2. Click on "SQL Server Network Configuration".
+  3. Click on "Protocols for MSSQLSERVER".
+  4. Make sure TCP/IP protocols are enabled.
+![SQL server configuration manager](https://github.com/Hammad-AlQuraishi/mediumImages/blob/main/SOC%20Simulation%20in%20Azure/SQL%20Server%20troubleshooting.png)
